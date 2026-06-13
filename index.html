@@ -60,37 +60,86 @@
         </div>
     </section>
 
-    <section id="menu" class="scrapbook-menu">
-        <div class="scrapbook-title-container reveal-up">
-            <div class="scrapbook-badge">Bakery & Café</div>
-            <h2 class="scrapbook-title">PAOPAO / Brew & Co.</h2>
+    <section id="menu" class="editorial-menu">
+        <div class="em-header reveal-up">
+            <h2 class="em-title">M E N U</h2>
+            <span class="em-sub">Brew &amp; Co. — Signature Selections</span>
         </div>
 
-        <!-- The winding path background -->
-        <svg class="scrapbook-path-svg reveal-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" preserveAspectRatio="none">
-            <path d="M100,100 C300,150 800,50 850,300 C900,550 150,450 150,750 C150,1050 800,950 850,1150" 
-                  fill="none" stroke="#F4D03F" stroke-width="12" stroke-linecap="round" stroke-dasharray="20 20"/>
-            <polygon points="850,300 870,280 880,310" fill="#F4D03F" transform="translate(-10,-10)"/>
-            <polygon points="150,750 130,730 120,760" fill="#F4D03F" transform="translate(10,-10)"/>
-        </svg>
+        <div class="em-grid">
 
-        <div class="scrapbook-items">
-            <div class="scrapbook-item item-1 reveal-up">
-                <div class="sticker-label label-1">CROISSANT <span class="cost">₹200</span></div>
-                <div class="sticker-img"><img src="https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?q=80&w=600&auto=format&fit=crop" alt="Croissant"></div>
+            <!-- Card 1 -->
+            <div class="em-card reveal-up">
+                <div class="em-photo em-photo--1">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=700&auto=format&fit=crop" alt="Pour Over">
+                </div>
+                <div class="em-card-body">
+                    <span class="em-category">Single Origin</span>
+                    <h3 class="em-name">Pour Over</h3>
+                    <div class="em-price-row">
+                        <svg viewBox="0 0 60 16" xmlns="http://www.w3.org/2000/svg" class="em-dash">
+                            <line x1="0" y1="8" x2="50" y2="8" stroke="#5a3e2b" stroke-width="2.5" stroke-dasharray="5 4"/>
+                            <polygon points="55,8 45,3 45,13" fill="#5a3e2b"/>
+                        </svg>
+                        <span class="em-price">₹350</span>
+                    </div>
+                </div>
             </div>
-            <div class="scrapbook-item item-2 reveal-up" style="transition-delay: 0.1s;">
-                <div class="sticker-label label-2">STRAWBERRY SCONE <span class="cost">₹250</span></div>
-                <div class="sticker-img"><img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?q=80&w=600&auto=format&fit=crop" alt="Scone"></div>
+
+            <!-- Card 2 -->
+            <div class="em-card reveal-up" style="transition-delay:0.1s;">
+                <div class="em-photo em-photo--2">
+                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=700&auto=format&fit=crop" alt="Cold Brew">
+                </div>
+                <div class="em-card-body">
+                    <span class="em-category">18-Hour Steep</span>
+                    <h3 class="em-name">Cold Brew</h3>
+                    <div class="em-price-row">
+                        <svg viewBox="0 0 60 16" xmlns="http://www.w3.org/2000/svg" class="em-dash">
+                            <line x1="0" y1="8" x2="50" y2="8" stroke="#5a3e2b" stroke-width="2.5" stroke-dasharray="5 4"/>
+                            <polygon points="55,8 45,3 45,13" fill="#5a3e2b"/>
+                        </svg>
+                        <span class="em-price">₹380</span>
+                    </div>
+                </div>
             </div>
-            <div class="scrapbook-item item-3 reveal-up" style="transition-delay: 0.2s;">
-                <div class="sticker-label label-3">POUR OVER <span class="cost">₹350</span></div>
-                <div class="sticker-img"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" alt="Coffee"></div>
+
+            <!-- Card 3 -->
+            <div class="em-card reveal-up" style="transition-delay:0.2s;">
+                <div class="em-photo em-photo--3">
+                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=700&auto=format&fit=crop" alt="Flat White">
+                </div>
+                <div class="em-card-body">
+                    <span class="em-category">Velvet Milk</span>
+                    <h3 class="em-name">Flat White</h3>
+                    <div class="em-price-row">
+                        <svg viewBox="0 0 60 16" xmlns="http://www.w3.org/2000/svg" class="em-dash">
+                            <line x1="0" y1="8" x2="50" y2="8" stroke="#5a3e2b" stroke-width="2.5" stroke-dasharray="5 4"/>
+                            <polygon points="55,8 45,3 45,13" fill="#5a3e2b"/>
+                        </svg>
+                        <span class="em-price">₹420</span>
+                    </div>
+                </div>
             </div>
-            <div class="scrapbook-item item-4 reveal-up" style="transition-delay: 0.3s;">
-                <div class="sticker-label label-4">MATCHA LATTE <span class="cost">₹300</span></div>
-                <div class="sticker-img"><img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=600&auto=format&fit=crop" alt="Matcha"></div>
+
+            <!-- Card 4 -->
+            <div class="em-card reveal-up" style="transition-delay:0.3s;">
+                <div class="em-photo em-photo--4">
+                    <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=700&auto=format&fit=crop" alt="Matcha Latte">
+                </div>
+                <div class="em-card-body">
+                    <span class="em-category">Ceremonial Grade</span>
+                    <h3 class="em-name">Matcha Latte</h3>
+                    <div class="em-price-row">
+                        <svg viewBox="0 0 60 16" xmlns="http://www.w3.org/2000/svg" class="em-dash">
+                            <line x1="0" y1="8" x2="50" y2="8" stroke="#5a3e2b" stroke-width="2.5" stroke-dasharray="5 4"/>
+                            <polygon points="55,8 45,3 45,13" fill="#5a3e2b"/>
+                        </svg>
+                        <span class="em-price">₹480</span>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
