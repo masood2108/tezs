@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brew & Co. | Crafted for the Bold</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -59,57 +60,36 @@
         </div>
     </section>
 
-    <section id="menu" class="menu">
-        <div class="menu-container">
-            <div class="menu-left">
-                <div class="menu-header reveal-up">
-                    <h2>Signature <br><i>Selections</i></h2>
-                    <p style="max-width: 300px; color: rgba(255,255,255,0.7);">Curated blends and rare single origins, brewed to exact specifications.</p>
-                </div>
-                
-                <div class="menu-list">
-                    <div class="menu-item reveal-up active-item" data-img="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop">
-                        <div class="menu-mobile-img">
-                            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" alt="Pour Over">
-                        </div>
-                        <h3>Pour Over</h3>
-                        <p>Ethiopia Yirgacheffe • Floral, Bergamot, Honey</p>
-                        <div class="price">₹350</div>
-                    </div>
-                    
-                    <div class="menu-item reveal-up" style="transition-delay: 0.1s;" data-img="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop">
-                        <div class="menu-mobile-img">
-                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?q=80&w=600&auto=format&fit=crop" alt="Flat White">
-                        </div>
-                        <h3>Flat White</h3>
-                        <p>House Espresso Blend • Velvet Milk, Cocoa, Hazelnut</p>
-                        <div class="price">₹420</div>
-                    </div>
-                    
-                    <div class="menu-item reveal-up" style="transition-delay: 0.2s;" data-img="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=600&auto=format&fit=crop">
-                        <div class="menu-mobile-img">
-                            <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=600&auto=format&fit=crop" alt="Cold Brew">
-                        </div>
-                        <h3>Cold Brew</h3>
-                        <p>Guatemala Antigua • 18-hour steep, Smooth, Dark Chocolate</p>
-                        <div class="price">₹380</div>
-                    </div>
+    <section id="menu" class="scrapbook-menu">
+        <div class="scrapbook-title-container reveal-up">
+            <div class="scrapbook-badge">Bakery & Café</div>
+            <h2 class="scrapbook-title">PAOPAO / Brew & Co.</h2>
+        </div>
 
-                    <div class="menu-item reveal-up" style="transition-delay: 0.3s;" data-img="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=600&auto=format&fit=crop">
-                        <div class="menu-mobile-img">
-                            <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=600&auto=format&fit=crop" alt="Matcha Latte">
-                        </div>
-                        <h3>Matcha Latte</h3>
-                        <p>Ceremonial Grade Uji Matcha • Steamed Oat Milk</p>
-                        <div class="price">₹480</div>
-                    </div>
-                </div>
+        <!-- The winding path background -->
+        <svg class="scrapbook-path-svg reveal-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1200" preserveAspectRatio="none">
+            <path d="M100,100 C300,150 800,50 850,300 C900,550 150,450 150,750 C150,1050 800,950 850,1150" 
+                  fill="none" stroke="#F4D03F" stroke-width="12" stroke-linecap="round" stroke-dasharray="20 20"/>
+            <polygon points="850,300 870,280 880,310" fill="#F4D03F" transform="translate(-10,-10)"/>
+            <polygon points="150,750 130,730 120,760" fill="#F4D03F" transform="translate(10,-10)"/>
+        </svg>
+
+        <div class="scrapbook-items">
+            <div class="scrapbook-item item-1 reveal-up">
+                <div class="sticker-label label-1">CROISSANT <span class="cost">₹200</span></div>
+                <div class="sticker-img"><img src="https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?q=80&w=600&auto=format&fit=crop" alt="Croissant"></div>
             </div>
-            
-            <div class="menu-right reveal-up" style="transition-delay: 0.4s;">
-                <div class="menu-preview-img">
-                    <img id="menu-preview" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" alt="Menu Preview">
-                </div>
+            <div class="scrapbook-item item-2 reveal-up" style="transition-delay: 0.1s;">
+                <div class="sticker-label label-2">STRAWBERRY SCONE <span class="cost">₹250</span></div>
+                <div class="sticker-img"><img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?q=80&w=600&auto=format&fit=crop" alt="Scone"></div>
+            </div>
+            <div class="scrapbook-item item-3 reveal-up" style="transition-delay: 0.2s;">
+                <div class="sticker-label label-3">POUR OVER <span class="cost">₹350</span></div>
+                <div class="sticker-img"><img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" alt="Coffee"></div>
+            </div>
+            <div class="scrapbook-item item-4 reveal-up" style="transition-delay: 0.3s;">
+                <div class="sticker-label label-4">MATCHA LATTE <span class="cost">₹300</span></div>
+                <div class="sticker-img"><img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?q=80&w=600&auto=format&fit=crop" alt="Matcha"></div>
             </div>
         </div>
     </section>

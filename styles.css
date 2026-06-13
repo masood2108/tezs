@@ -311,105 +311,130 @@ header.scrolled {
   color: rgba(26, 26, 26, 0.7);
 }
 
-/* Improved Menu List with Sticky Image Preview */
-.menu {
-  padding: 120px 64px;
-  background: var(--green);
-  color: var(--white);
+/* Scrapbook Menu Section */
+.scrapbook-menu {
+  background-color: #D6BA98; /* Kraft paper color */
+  background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+  padding: 120px 0 160px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Caveat', cursive;
+  color: #333;
 }
 
-.menu-container {
-  display: flex;
-  gap: 80px;
-}
-
-.menu-left {
-  flex: 1.2;
-}
-
-.menu-header {
+.scrapbook-title-container {
+  text-align: center;
   margin-bottom: 80px;
+  position: relative;
+  z-index: 10;
 }
 
-.menu-header h2 {
-  font-size: 80px;
-  font-weight: 400;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 20px;
+.scrapbook-badge {
+  background: #fff;
+  border: 4px solid #F4D03F;
+  display: inline-block;
+  padding: 12px 36px;
+  font-size: 28px;
+  font-weight: 700;
+  border-radius: 20px 20px 20px 0;
+  transform: rotate(-3deg);
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+  color: #333;
 }
 
-.menu-list {
+.scrapbook-title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 56px;
+  margin-top: 24px;
+  color: #2a1b12;
+}
+
+.scrapbook-items {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 900px;
+  z-index: 10;
+}
+
+.scrapbook-path-svg {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 800px;
+  z-index: 1;
+}
+
+.scrapbook-item {
+  position: absolute;
   display: flex;
   flex-direction: column;
-}
-
-.menu-item {
-  display: flex;
   align-items: center;
-  padding: 40px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  cursor: pointer;
-  transition: var(--transition);
+  gap: 16px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.menu-item:hover, .menu-item.active-item {
-  padding-left: 24px;
-  background: rgba(255,255,255,0.03);
+.scrapbook-item.reveal-up.active:hover {
+  transform: scale(1.08) rotate(3deg);
+  z-index: 20;
 }
 
-.menu-item h3 {
-  font-size: 40px;
-  flex: 0 0 45%;
-  transition: var(--transition);
-}
+.item-1 { top: 0; left: 10%; }
+.item-2 { top: 200px; right: 10%; }
+.item-3 { top: 400px; left: 20%; }
+.item-4 { top: 600px; right: 20%; }
 
-.menu-item:hover h3, .menu-item.active-item h3 {
-  color: var(--gold);
-}
-
-.menu-item p {
-  flex: 1;
-  font-size: 16px;
-  color: rgba(255,255,255,0.6);
-  padding-right: 20px;
-}
-
-.menu-item .price {
-  font-size: 24px;
-  font-family: 'Bodoni Moda', serif;
-  color: var(--gold);
-}
-
-.menu-right {
-  flex: 0.8;
+.sticker-img {
+  width: 220px;
+  height: 220px;
+  border: 10px solid #F4D03F;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  overflow: hidden;
+  box-shadow: 6px 6px 15px rgba(0,0,0,0.15);
+  background: #fff;
+  z-index: 2;
   position: relative;
 }
 
-.menu-preview-img {
-  position: sticky;
-  top: 140px;
-  width: 100%;
-  height: 600px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.menu-preview-img img {
+.sticker-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: opacity 0.4s ease, transform 0.6s ease;
+  mix-blend-mode: multiply;
 }
 
-.menu-preview-img img.fade-out {
-  opacity: 0;
-  transform: scale(1.05);
+.item-2 .sticker-img { border-radius: 50% 50% 30% 70% / 60% 40% 60% 40%; }
+.item-3 .sticker-img { border-radius: 30% 70% 70% 30% / 50% 50% 50% 50%; }
+.item-4 .sticker-img { border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%; }
+
+.sticker-label {
+  background: #F4D03F;
+  color: #222;
+  padding: 12px 28px;
+  font-size: 32px;
+  font-weight: 700;
+  border-radius: 15px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+  transform: rotate(-5deg);
+  white-space: nowrap;
+  position: relative;
+  z-index: 3;
 }
 
-.menu-mobile-img {
-  display: none;
+.label-1 { background: #F4D03F; }
+.label-2 { background: #E84C3D; color: #fff; transform: rotate(4deg); }
+.label-3 { background: #3498DB; color: #fff; transform: rotate(-3deg); }
+.label-4 { background: #27AE60; color: #fff; transform: rotate(5deg); }
+
+.cost {
+  font-weight: 700;
+  margin-left: 12px;
+  border-left: 3px dashed rgba(255,255,255,0.6);
+  padding-left: 12px;
 }
+.label-1 .cost { border-color: rgba(0,0,0,0.3); }
 
 /* Reviews Section */
 .reviews {
@@ -549,6 +574,42 @@ header.scrolled {
   transform: translateY(0);
 }
 
+/* Scrapbook Specific Animations */
+.scrapbook-item.reveal-up {
+  opacity: 0;
+  transform: scale(0.4) rotate(-15deg);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy spring effect */
+}
+
+.scrapbook-item.reveal-up.active {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.scrapbook-path-svg.reveal-up {
+  opacity: 0;
+  transform: translateY(-80px) scale(0.9);
+  transition: all 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scrapbook-path-svg.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Infinite Floating Wiggle for Stickers */
+@keyframes stickerFloat {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-12px) rotate(4deg); }
+}
+
+.scrapbook-item.reveal-up.active .sticker-img {
+  animation: stickerFloat 6s ease-in-out infinite;
+}
+.item-2.reveal-up.active .sticker-img { animation-delay: -1.5s; }
+.item-3.reveal-up.active .sticker-img { animation-delay: -3s; }
+.item-4.reveal-up.active .sticker-img { animation-delay: -4.5s; }
+
 /* Responsive */
 @media (max-width: 1024px) {
   header { padding: 24px 32px; }
@@ -562,30 +623,37 @@ header.scrolled {
   .feature { flex-direction: column; padding: 100px 32px; gap: 60px; text-align: center; }
   .feature-img { width: 100%; height: 500px; }
   
-  .menu { padding: 100px 32px; }
-  .menu-container { flex-direction: column; }
-  .menu-right { display: none; }
-  .menu-header { text-align: center; }
-  .menu-header h2 { font-size: 64px; }
-  
-  .menu-mobile-img {
-    display: block;
-    width: 100%;
-    height: 240px;
-    border-radius: 16px;
-    overflow: hidden;
-    margin-bottom: 24px;
-  }
-  .menu-mobile-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .scrapbook-items {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    position: relative;
   }
   
-  .menu-list { gap: 32px; }
-  .menu-item { flex-direction: column; align-items: flex-start; gap: 8px; padding: 32px 24px; background: rgba(255,255,255,0.03); border-radius: 24px; border-bottom: none; }
-  .menu-item:hover { padding-left: 24px; background: rgba(255,255,255,0.05); }
-  .menu-item p { padding-right: 0; margin-bottom: 16px; }
+  .scrapbook-items::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    background-image: repeating-linear-gradient(to bottom, #F4D03F 0, #F4D03F 20px, transparent 20px, transparent 40px);
+    z-index: 0;
+  }
+
+  .scrapbook-item {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: 1;
+  }
+  .scrapbook-path-svg {
+    display: none;
+  }
   
   .reviews { padding: 100px 32px; }
   .reviews-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
