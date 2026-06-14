@@ -174,10 +174,16 @@ header.scrolled {
 .hero-text h1 {
   font-size: 9vw;
   line-height: 0.9;
-  font-weight: 400;
+  font-weight: 800; /* was 400 */
   margin-bottom: 40px;
   color: var(--green);
   text-transform: uppercase;
+  letter-spacing: -3px;
+
+  /* makes text much more visible */
+  text-shadow: 
+    1px 1px 0 rgba(13,46,32,0.15),
+    2px 2px 0 rgba(13,46,32,0.08);
 }
 
 .hero-text h1 i {
@@ -191,7 +197,7 @@ header.scrolled {
   max-width: 400px;
   margin-bottom: 48px;
   line-height: 1.6;
-  color: rgba(26, 26, 26, 0.7);
+  color: rgba(26, 26, 26, 0.85);
 }
 
 .hero-img-container {
@@ -299,16 +305,26 @@ header.scrolled {
 
 .feature-text h2 {
   font-size: 64px;
-  line-height: 1.1;
+  line-height: 1.05;
   color: var(--green);
   margin-bottom: 40px;
+  font-weight: 800; /* added */
+  letter-spacing: -2px;
+
+  text-shadow:
+    1px 1px 0 rgba(13,46,32,0.12);
+}
+
+.hero-text h1,
+.feature-text h2 {
+    letter-spacing: -4px;
 }
 
 .feature-text p {
   font-size: 20px;
   margin-bottom: 24px;
   line-height: 1.7;
-  color: rgba(26, 26, 26, 0.7);
+  color: rgba(26, 26, 26, 0.85);
 }
 
 /* Editorial Menu — 2×2 Grid */
@@ -337,8 +353,9 @@ header.scrolled {
 .em-sub {
   font-family: 'Caveat', cursive;
   font-size: 22px;
-  color: #5a3e2b;
+  color: #2e1a0a;
   letter-spacing: 1px;
+  font-weight: 600;
 }
 
 /* 2×2 grid */
@@ -404,18 +421,20 @@ header.scrolled {
 .em-category {
   font-family: 'Caveat', cursive;
   font-size: 18px;
-  color: #5a3e2b;
+  color: #2e1a0a;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .em-name {
   font-family: 'Bodoni Moda', serif;
   font-size: clamp(36px, 4.5vw, 58px);
   font-weight: 900;
-  color: #1A1A1A;
+  color: #0d0d0d;
   line-height: 1;
   letter-spacing: -0.01em;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
 }
 
 /* Price row: dashed line → price */
@@ -437,7 +456,7 @@ header.scrolled {
   font-family: 'Caveat', cursive;
   font-size: clamp(24px, 3vw, 36px);
   font-weight: 700;
-  color: #3a2410;
+  color: #1a0a00;
 }
 
 /* Mobile: 1 column, image always on top */
@@ -468,9 +487,28 @@ header.scrolled {
   margin-bottom: 80px;
 }
 
+.reviews-label {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
 .reviews-header h2 {
-  font-size: 64px;
+  font-size: clamp(56px, 7vw, 96px);
+  font-weight: 900;
   color: var(--green);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.reviews-header h2 i {
+  font-style: italic;
+  font-weight: 900;
+  color: var(--gold);
 }
 
 .reviews-grid {
@@ -506,7 +544,7 @@ header.scrolled {
   font-style: italic;
   margin-bottom: 40px;
   line-height: 1.6;
-  color: rgba(26, 26, 26, 0.8);
+  color: rgba(26, 26, 26, 0.88);
 }
 
 .reviewer {
@@ -533,7 +571,7 @@ header.scrolled {
 .reviewer span {
   display: block;
   font-size: 13px;
-  color: rgba(26, 26, 26, 0.5);
+  color: rgba(26, 26, 26, 0.65);
   margin-top: 4px;
 }
 
